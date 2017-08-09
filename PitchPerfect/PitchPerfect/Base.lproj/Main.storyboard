@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="1nT-SC-n1n">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rN-6w-0i6">
+                                <rect key="frame" x="110.5" y="256.5" width="155" height="155"/>
+                                <state key="normal" image="record_button"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dWX-cD-wzb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnG-s5-cgw">
+                                <rect key="frame" x="134.5" y="218" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ne-X7-VKx">
+                                <rect key="frame" x="110.5" y="419" width="155" height="155"/>
+                                <state key="normal" image="Stop"/>
+                                <connections>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2X-fg-J9e"/>
+                                    <segue destination="CEU-82-Nab" kind="show" id="bu4-dJ-dnm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hnG-s5-cgw" firstAttribute="centerX" secondItem="9rN-6w-0i6" secondAttribute="centerX" id="LhH-Hj-Acd"/>
+                            <constraint firstItem="9rN-6w-0i6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Odu-EA-Kdp"/>
+                            <constraint firstItem="9rN-6w-0i6" firstAttribute="top" secondItem="hnG-s5-cgw" secondAttribute="bottom" constant="17.5" id="YfE-RA-d50"/>
+                            <constraint firstItem="3ne-X7-VKx" firstAttribute="centerX" secondItem="9rN-6w-0i6" secondAttribute="centerX" id="jww-Kr-pD0"/>
+                            <constraint firstItem="3ne-X7-VKx" firstAttribute="top" secondItem="9rN-6w-0i6" secondAttribute="bottom" constant="7.5" id="kER-oZ-QVo"/>
+                            <constraint firstItem="9rN-6w-0i6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nsK-ck-NPi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="J6p-ee-ai4"/>
+                    <connections>
+                        <outlet property="recordingButton" destination="9rN-6w-0i6" id="htX-e7-baV"/>
+                        <outlet property="recordingLabel" destination="hnG-s5-cgw" id="Jed-8l-Bb3"/>
+                        <outlet property="stopButton" destination="3ne-X7-VKx" id="iqV-fr-Edm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PRw-d9-j4a">
+            <objects>
+                <viewController id="CEU-82-Nab" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yyD-TC-Yhz"/>
+                        <viewControllerLayoutGuide type="bottom" id="NKj-KQ-huH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9wp-EP-3Fl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.70007223409168651" green="1" blue="0.68003412719255685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBv-4q-kcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="130"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LGs-RR-Q6N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1nT-SC-n1n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G88-hk-Qrb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="HK4-eV-NFr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yk-yr-4cK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Stop" width="155" height="155"/>
+        <image name="record_button" width="155" height="155"/>
+    </resources>
+</document>
